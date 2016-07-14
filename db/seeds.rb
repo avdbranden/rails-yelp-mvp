@@ -22,7 +22,7 @@ Review.destroy_all
   (2..5).to_a.sample.times do
     review = Review.new({
       content: Faker::Lorem.sentence,
-      rating: (0..5).to_a.sample,
+      rating: (0..5).to_a.sample.to_i,
       restaurant_id: restaurant.id
     })
     review.save
