@@ -1,0 +1,16 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "" %>
+  <% end %>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <!-- Button (restaurants button) -->
+    <%= link_to t(".top_call_to_action", default: "List of restaurants"), restaurants_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+
+    <!-- Button (new restaurant button) -->
+    <%= link_to t(".top_call_to_action", default: "Create a restaurant"), new_restaurant_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+  </div>
+</div>
