@@ -1,0 +1,17 @@
+
+<h1 class="text-center"><%= @restaurant.name %></h1>
+
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+<p><%= @restaurant.category %></p>
+
+<%= link_to "Go back to restaurants", restaurants_path, {class: "btn btn-success"} %>
+
+<h2>Reviews</h2>
+<% count = 0 %>
+<% @restaurant.reviews.each do |review| %>
+  <% count += 1 %>
+  <p><strong> <%= count %>: </strong><%= review.content %> Rating: <%= review.rating %></p>
+<% end %>
+
+
